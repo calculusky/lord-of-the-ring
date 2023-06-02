@@ -8,7 +8,8 @@
         "dist/**/*",
         "LICENSE",
         "package.json",
-        "design.md"
+        "design.md",
+        "readme.md"
     ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
