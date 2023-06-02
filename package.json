@@ -1,0 +1,51 @@
+{
+    "name": "lord-of-the-ring-sdk",
+    "version": "1.0.0",
+    "description": "This is an SDK for the Lord of the Rings",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/**/*",
+        "LICENSE",
+        "package.json",
+        "design.md"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+        "lint": "eslint \"{src}/**/*.ts\" --fix",
+        "prepare": "pnpm build",
+        "prepublishOnly": "pnpm lint",
+        "preversion": "pnpm lint",
+        "version": "pnpm format && git add .",
+        "postversion": "git push && git push --tags"
+    },
+    "keywords": [
+        "movie"
+    ],
+    "author": "Okwor Chinweoke Cyprian <okworchinweoke@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.2.5",
+        "@typescript-eslint/eslint-plugin": "^5.59.8",
+        "@typescript-eslint/parser": "^5.59.8",
+        "eslint": "^8.41.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.8.8",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "axios": "^1.4.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/calculusky/lord-of-the-ringl.git"
+    },
+    "bugs": {
+        "url": "https://github.com/calculusky/lord-of-the-ring/issues"
+    },
+    "homepage": "https://github.com/calculusky/lord-of-the-ring#readme"
+}
